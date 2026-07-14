@@ -1,0 +1,243 @@
+
+:root {
+  --bg: #ffffff;
+  --text: #1f2933;
+  --muted: #5f6b7a;
+  --line: #e5e7eb;
+  --accent: #4353a3;
+  --accent-soft: #f2f4ff;
+  --max: 1040px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  width: min(92%, var(--max));
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,0.96);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.nav {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: .01em;
+  color: var(--text);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: .95rem;
+}
+
+.nav-links a { color: var(--muted); }
+.nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 48px;
+  padding: 64px 0 44px;
+  align-items: start;
+}
+
+.kicker {
+  color: var(--accent);
+  font-weight: 650;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 4vw, 3.35rem);
+  line-height: 1.08;
+  margin: 0 0 18px;
+  letter-spacing: -0.035em;
+}
+
+.lead {
+  font-size: 1.12rem;
+  color: var(--muted);
+  max-width: 720px;
+  margin: 0 0 22px;
+}
+
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 9px 15px;
+  font-weight: 600;
+  font-size: .94rem;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn.secondary {
+  background: white;
+  color: var(--accent);
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(31,41,51,.05);
+}
+
+.profile-card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.profile-card p {
+  margin: 8px 0;
+  color: var(--muted);
+}
+
+.section {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section h2 {
+  font-size: 1.55rem;
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 18px;
+}
+
+.item {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.item:first-child { border-top: none; padding-top: 0; }
+
+.item-title {
+  font-weight: 700;
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: .94rem;
+  margin-bottom: 8px;
+}
+
+.abstract {
+  margin: 0 0 10px;
+  color: #344054;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.tag {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.small { font-size: .93rem; color: var(--muted); }
+
+@media (max-width: 760px) {
+  .hero, .grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 38px; }
+  .nav { align-items: flex-start; flex-direction: column; padding: 16px 0; }
+  .nav-links { gap: 12px; }
+}
+
+/* Compact academic publication lists */
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pub-list li {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.pub-list li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.pub-title {
+  display: block;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.pub-meta {
+  display: block;
+  color: var(--muted);
+  font-size: .96rem;
+  margin-top: 3px;
+}
+
+.contact-list {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-list p {
+  margin: 6px 0;
+}
