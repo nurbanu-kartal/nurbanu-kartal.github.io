@@ -91,7 +91,9 @@ button, a { transition: opacity 170ms ease, color 170ms ease; }
 .teaching-list span { color: var(--muted); font-size: 14px; }
 .teaching-list strong { font-family: var(--serif); font-size: 27px; font-weight: 400; }
 .teaching-list p { margin: 4px 0 0; color: var(--muted); }
-.text-button { border: 0; background: transparent; padding: 0; margin-top: 38px; color: var(--ink); text-decoration: underline; text-underline-offset: .3em; font: 500 14px/1.4 var(--sans); cursor: pointer; }
+.text-button { display: inline-block; border: 0; background: transparent; padding: 0; margin-top: 38px; color: var(--ink); text-decoration: underline; text-underline-offset: .3em; font: 500 14px/1.4 var(--sans); cursor: pointer; }
+.cv-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 38px; }
+.cv-actions .text-button { margin-top: 0; }
 .cv-sheet { background: #fff; padding-top: 72px; padding-bottom: 92px; margin-bottom: 110px; box-shadow: 0 1px 0 rgba(0,0,0,.03); }
 .cv-heading { display: flex; justify-content: space-between; align-items: end; padding-bottom: 28px; border-bottom: 1px solid var(--ink); }
 .cv-heading h2 { font-family: var(--serif); font-size: 43px; font-weight: 400; margin: 0; letter-spacing: -.035em; }
