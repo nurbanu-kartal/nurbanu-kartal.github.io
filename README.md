@@ -19,7 +19,6 @@ The website uses plain HTML, CSS, and JavaScript. There is no build process and 
 - `index.html` — homepage
 - `about.html` — biography, fields, education
 - `research.html` — research themes and papers
-- `publications.html` — publication list
 - `teaching.html` — teaching experience
 - `cv.html` — full web CV; visitors can print or save it as PDF
 - `contact.html` — public contact details
